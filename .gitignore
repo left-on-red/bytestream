@@ -1,0 +1,7 @@
+.vscode/
+node_modules/
+build/
+builds/
+public/css
+root/
+config.json

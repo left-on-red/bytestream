@@ -1,0 +1,35 @@
+{
+  "name": "bytestream",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "public/*",
+      "components/*",
+      "sass/*",
+      "index.html"
+    ]
+  },
+  "scripts": {
+    "_compile_sass": "sass sass:public/css",
+    "nexe": "nexe --build",
+    "build": "node build.js",
+    "build-all": "node build-all.js",
+    "dev": "concurrently \"nodemon .\" \"sass --watch sass:public/css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "archiver": "^5.3.0",
+    "concurrently": "^6.2.1",
+    "minify": "^7.1.0",
+    "nexe": "^4.0.0-beta.18",
+    "nodemon": "^2.0.12",
+    "sass": "^1.41.0"
+  }
+}

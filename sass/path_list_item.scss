@@ -1,0 +1,61 @@
+.path-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    .path-icon {
+        text-align: center;
+        vertical-align: middle;
+        padding: 3px;
+        display: inline-block;
+
+        .icon {
+            font-size: 26px;
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: #ffffff13;
+            }
+        }
+    }
+
+    .path-container {
+        background-color: #ffffff0a;
+        border: solid 2px #ffffff11;
+        border-top: none;
+        cursor: pointer;
+        transition: all 0.1s;
+        padding: 3px;
+        width: 100%;
+
+        &:hover {
+            background-color: #ffffff13;
+        }
+
+        &:active {
+            background-color: #ffffff1f;
+        }
+    }
+
+    &:first-of-type .path-container {
+        border-top: solid 2px #ffffff11;
+        border-radius: 5px 5px 0 0;
+    }
+
+    &:last-of-type .path-container {
+        border-radius: 0 0 5px 5px;
+    }
+
+    .path-label {
+        display: inline-block;
+        margin: 0;
+        padding: 7px;
+        vertical-align: middle;
+        letter-spacing: 2px;
+    }
+}
