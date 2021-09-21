@@ -41,4 +41,4 @@ for building this project, there's a couple npm scripts that you can run.
     - `--overwrite` - overwrites the `[path]` if it already exists (the script will give you an error if otherwise)
     - `--exe` - compiles the application into an executable
     - `--target=<target>` - specifies the target architecture if you're trying to compile an executable. defaults to `windows-x64-12.16.2`. ([full list](https://github.com/nexe/nexe/releases?after=v3.3.4))
-- `npm run build-all` - will attempt to build the application for major architecture, and archive the builds to make publishing releases easier.
+- `npm run build-all` - will attempt to build the application for every major architecture, and archive the builds to make publishing releases easier.
