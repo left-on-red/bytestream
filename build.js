@@ -92,7 +92,7 @@ let npm = () => {
 let compile_exe = async () => {
     if (exe) {
         let exe_config = {
-            input: build_directory,
+            input: `${build_directory}/index.js`,
             output: `${build_directory}/bytestream`,
             verbose: true,
             target: 'windows-x64-12.16.2'
@@ -130,6 +130,12 @@ let compile_exe = async () => {
             'index.js'
         ]
 
-        for (let p = 0; p < paths.length; p++) { fs.rmSync(`${build_directory}/${paths[p]}`, { recursive: true }) }
+        for (let p = 0; p < paths.length; p++) {
+            try {
+                fs.rmSync(`${build_directory}/${paths[p]}`, { recursive: true })
+            }
+
+            catch(e) { console.log('warning:'); console.log(e) }
+        }
     }
 })();
